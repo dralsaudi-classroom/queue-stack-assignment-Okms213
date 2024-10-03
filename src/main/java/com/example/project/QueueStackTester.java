@@ -60,11 +60,13 @@ public class QueueStackTester {
             return false;
         
         T data = st.pop();
+        boolean flag = false;
         if(data.equals(e))
-            return true;
+            flag = true;
 
+        else
+            flag =  search(st,e);
         
-        boolean flag =  search(st,e);
         st.push(data);
         return flag;
         
